@@ -1,0 +1,54 @@
+{
+  "name": "react-native-simple-danmaku",
+  "version": "0.1.0",
+  "description": "react-native弹幕组件",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "release": "dotenv release-it"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coldrainf/react-native-simple-danmaku.git"
+  },
+  "keywords": [
+    "react-native",
+    "danmaku",
+    "component"
+  ],
+  "author": "coldrainf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coldrainf/react-native-simple-danmaku/issues"
+  },
+  "homepage": "https://github.com/coldrainf/react-native-simple-danmaku#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@release-it/conventional-changelog": "^2.0.0",
+    "@types/react": "^16.9.55",
+    "@types/react-native": "^0.63.32",
+    "dotenv-cli": "^4.0.0",
+    "husky": "^4.3.0",
+    "release-it": "^14.2.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.0.5"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-native": ">=0.60.0"
+  },
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  }
+}
