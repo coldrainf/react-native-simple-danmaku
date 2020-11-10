@@ -20,7 +20,7 @@ npm i react-native-simple-danmaku
 ```typescript
 import React, { useEffect, useRef, useState } from 'react'
 
-import Danmaku from 'react-native-simple-danmaku'
+import Danmaku, { DanmakuData, DanmakuRef } from 'react-native-simple-danmaku'
 
 const App = () => {
 
