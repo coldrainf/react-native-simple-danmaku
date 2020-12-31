@@ -17,34 +17,33 @@ npm i react-native-simple-danmaku
 
 ### 例子
 
-```typescript
-import React, { useEffect, useRef, useState } from 'react'
+```javascript
+import React, { useEffect, useRef } from 'react'
 
-import Danmaku, { DanmakuData, DanmakuRef } from 'react-native-simple-danmaku'
+import Danmaku from 'react-native-simple-danmaku'
+
+const data = [
+  {
+    msg: 'aaaaaa',
+    playTime: 10,
+  },
+  {
+    msg: 'bbbbbbbbbb',
+    playTime: 0,
+    mode: 0,
+    color: '#f00'
+  },
+  {
+    msg: 'cccccccccccccc',
+    playTime: 100,
+    mode: 1,
+  }
+]
 
 const App = () => {
-
-  const ref = useRef<DanmakuRef>(null)
-  const [data, setData] = useState<Array<DanmakuData>>([])
+  const ref = useRef(null)
 
   useEffect(() => {
-    setData([
-      {
-        msg: 'aaaaaa',
-        playTime: 10,
-      },
-      {
-        msg: 'bbbbbbbbbb',
-        playTime: 0,
-        mode: 0,
-        color: '#f00'
-      },
-      {
-        msg: 'cccccccccccccc',
-        playTime: 100,
-        mode: 1,
-      }
-    ])
     ref.current?.play()
   }, [])
 
