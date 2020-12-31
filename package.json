@@ -1,6 +1,6 @@
 {
   "name": "react-native-simple-danmaku",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "react-native弹幕组件",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
