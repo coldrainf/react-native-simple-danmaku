@@ -23,6 +23,7 @@ import {
 
 
 const defaultProps = {
+    playSpeed: 1,
     itemFontSize: 12,
     itemOpacity: 1,
     itemSpeed: 0.4,
@@ -137,7 +138,7 @@ const Danmaku = forwardRef<DanmakuRef, DanmakuProps>((props, ref) => {
     const loop = (time: number, init: boolean) => {
         //设置当前播放时间
         if (init) lastTime.current = time
-        playTime.current = time - lastTime.current + playTime.current
+        playTime.current = (time - lastTime.current) * (props.playSpeed ?? defaultProps.playSpeed) + playTime.current
         lastTime.current = time
 
         //找到当前时间内所有未发射弹幕并计算其应在轨道

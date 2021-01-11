@@ -122,6 +122,8 @@ export interface DanmakuProps extends ViewProps {
     visible: boolean,
     //弹幕最大行数，默认铺满所在区域，当值∈(0-1)时作为占屏百分比
     maxLine?: number,
+    //播放倍速，默认1
+    playSpeed?: number,
     //弹幕字体大小，默认12
     itemFontSize?: number,
     //弹幕透明度，值∈[0,1]，默认1
